@@ -1,0 +1,29 @@
+#
+
+---
+# IBM WebSphere MQ
+wmq:
+  :factory: com.ibm.mq.jms.MQQueueConnectionFactory
+  :queue_manager: QM1
+  :host_name: localhost
+  :channel: DEV.APP.SVRCONN
+  :port: 1414
+  # Transport Type: com.ibm.mq.jms.JMSC::MQJMS_TP_CLIENT_MQ_TCPIP
+  :transport_type: 1
+  :username: app
+  :password: password
+  :require_jars:
+    - CHANGE_PATH/jars/com.ibm.dhbcore.jar
+    - CHANGE_PATH/jars/com.ibm.mq.axis2.jar
+    - CHANGE_PATH/jars/com.ibm.mq.commonservices.jar
+    - CHANGE_PATH/jars/com.ibm.mq.headers.jar
+    - CHANGE_PATH/jars/com.ibm.mq.jar
+    - CHANGE_PATH/jars/com.ibm.mq.jmqi.jar
+    - CHANGE_PATH/jars/com.ibm.mq.jms.Nojndi.jar
+    - CHANGE_PATH/jars/com.ibm.mq.pcf.jar
+    - CHANGE_PATH/jars/com.ibm.mq.soap.jar
+    - CHANGE_PATH/jars/com.ibm.mq.tools.ras.jar
+    - CHANGE_PATH/jars/com.ibm.mqjms.jar
+    - CHANGE_PATH/jars/javax.jms.jar
+    - CHANGE_PATH/jars/javax.resource.jar
+    - CHANGE_PATH/jars/javax.transaction.jar

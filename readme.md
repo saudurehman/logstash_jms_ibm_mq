@@ -74,13 +74,15 @@ $ exit
 
 ### Login to console
 https://localhost:9443/ibmmq/console
+
 user: admin
+
 password: passw0rd
 
 ### Add Messages to Queue
 Add message to 'DEV.QUEUE.1' using UI.
 
-[](mq.png)
+![](mq.png)
 
 
 ## Step 4: Collect Connection Queue Details
@@ -104,9 +106,9 @@ bin/logstash-plugin install logstash-input-jms
 ```
 
 ### Fix Absolute Path in mq.yml and jms.conf file
-```
-  Change jar files path in mq.yml and jms.conf file
-```
+
+Change jar files path in mq.yml and jms.conf file
+
 
 jms.conf
 ```
@@ -159,7 +161,7 @@ wmq:
 ```
 bin/logstash -f jms.conf
 ```
-[] (logstash.png)
+![Logstash](logstash.png)
 
 
 #THE END

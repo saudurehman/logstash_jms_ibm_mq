@@ -6,6 +6,9 @@ This is a recipe to use Logstash JMS plugin to connect with the IBM MQ and read 
 ### Install Docker
 Make sure you have docker running
 
+### Download 
+See this [Tech Note](http://www-01.ibm.com/support/docview.wss?uid=swg21683398&myns=swgws&mynp=OCSSFKSJ&mync=E) to download the IBM MQ classes for Java.
+
 ### Pull MQ Server image
 ```
 docker pull ibmcom/mq:latest
@@ -141,20 +144,7 @@ wmq:
   :username: app
   :password: password
   :require_jars:
-    - CHANGE_PATH/jars/com.ibm.dhbcore.jar
-    - CHANGE_PATH/jars/com.ibm.mq.axis2.jar
-    - CHANGE_PATH/jars/com.ibm.mq.commonservices.jar
-    - CHANGE_PATH/jars/com.ibm.mq.headers.jar
-    - CHANGE_PATH/jars/com.ibm.mq.jar
-    - CHANGE_PATH/jars/com.ibm.mq.jmqi.jar
-    - CHANGE_PATH/jars/com.ibm.mq.jms.Nojndi.jar
-    - CHANGE_PATH/jars/com.ibm.mq.pcf.jar
-    - CHANGE_PATH/jars/com.ibm.mq.soap.jar
-    - CHANGE_PATH/jars/com.ibm.mq.tools.ras.jar
-    - CHANGE_PATH/jars/com.ibm.mqjms.jar
-    - CHANGE_PATH/jars/javax.jms.jar
-    - CHANGE_PATH/jars/javax.resource.jar
-    - CHANGE_PATH/jars/javax.transaction.jar
+    - CHANGE_PATH/wmq/JavaSE/com.ibm.mq.allclient.jar
 ```
 
 ### Run Logstash
